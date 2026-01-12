@@ -18,13 +18,21 @@ This project explores learner engagement and course completion in a large-scale 
 ## Project structure
 
 AnalyticsFinal_Project/
+
 ├── data/        # Raw input data (CSV files)
+
 ├── munge/       # Data preprocessing scripts
+
 ├── cache/       # Cached and processed datasets
+
 ├── reports/     # R Markdown report and outputs
+
 ├── src/         # Analysis and exploration scripts
+
 ├── graphs/      # Generated figures
+
 ├── config/      # ProjectTemplate configuration
+
 └── README.md    # Project documentation
 
 Key scripts:
