@@ -16,22 +16,24 @@ This project explores learner engagement and course completion in a large-scale 
 - To build a reproducible analytics workflow using ProjectTemplate and R Markdown
 
 ## Project structure
-AnalyticsFinal_Project/ 
-├── data/ # Raw input data (CSV files) 
 
-├── munge/ # Data preprocessing scripts 
+AnalyticsFinal_Project/
+├── data/        # Raw input data (CSV files)
+├── munge/       # Data preprocessing scripts
+├── cache/       # Cached and processed datasets
+├── reports/     # R Markdown report and outputs
+├── src/         # Analysis and exploration scripts
+├── graphs/      # Generated figures
+├── config/      # ProjectTemplate configuration
+└── README.md    # Project documentation
 
-├── cache/ # Cached and processed datasets 
+Key scripts:
 
-├── reports/ # R Markdown report and outputs 
+01_inventory.R – inspects raw files and inventories available datasets
 
-├── src/ # Analysis and exploration scripts 
+02_core_dataset.R – builds the core learner-level analytical dataset
 
-├── graphs/ # Generated figures 
-
-├── config/ # ProjectTemplate configuration
-
-└── README.md # Project documentation
+reports/Report.Rmd – main analytical report
 
 ## Methodology
 The analysis follows two CRISP-DM cycles:
@@ -42,7 +44,7 @@ Initial exploration of learner activity and its relationship with course complet
 Cycle 2:
 Refined analysis focusing only on learners who recorded at least one activity, reducing distortion from inactive enrolments and strengthening interpretation.
 
-Exploratory visualisations (e.g. boxplots on a log scale) are used to compare engagement distributions between completing and non-completing learners.
+Exploratory visualisations are used to compare engagement distributions between completing and non-completing learners.
 
 ## Key Output
 - A cleaned, learner-level dataset combining enrolment and activity data
@@ -67,7 +69,9 @@ Load the project:
 library(ProjectTemplate)
 load.project()
 
-Open and knit the report in reports/Report.Rmd.
+Open and knit the report:
+
+reports/Report.Rmd.
 
 ## Report
 
@@ -79,4 +83,8 @@ This document includes the full CRISP-DM workflow, exploratory analysis, discuss
 
 ## Author
 
-Alice Ting Sze Yin 250507144 MAS8505
+Alice Ting Sze Yin 
+
+Student ID: 250507144 
+
+MAS8505
