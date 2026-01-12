@@ -37,11 +37,11 @@ AnalyticsFinal_Project/
 
 Key scripts:
 
-01_inventory.R – inspects raw files and inventories available datasets
+01_inventory.R # inspects raw files and inventories available datasets
 
-02_core_dataset.R – builds the core learner-level analytical dataset
+02_core_dataset.R # builds the core learner-level analytical dataset
 
-reports/Report.Rmd – main analytical report
+reports/Report.Rmd # main analytical report
 
 ## Methodology
 The analysis follows two CRISP-DM cycles:
