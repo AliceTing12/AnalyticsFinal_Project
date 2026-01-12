@@ -1,39 +1,82 @@
 # AnalyticsFinal_Project
 
-Welcome to ProjectTemplate!
+# Learning Analytics for a FutureLearn MOOC
 
-This file introduces you to ProjectTemplate, but you should eventually replace
-the contents of this file with an introduction to your project. People who
-work with your data in the future will thank you for it, including your future
-self.
+## Project Overview
 
-ProjectTemplate is an R package that helps you organize your statistical
-analysis projects. Since you're reading this file, we'll assume that you've
-already called `create.project()` to set up this project and all of its
-contents.
+This project explores learner engagement and course completion in a large-scale FutureLearn MOOC on cyber security. Using platform data from seven course runs, the analysis investigates how patterns of learner activity relate to successful course completion. The work follows the CRISP-DM FRAMEWORK aross two analytical cycles, moving from an initial explanatory analysis to refined investigation focused on active learners. 
 
-To load your new project, you'll first need to `setwd()` into the directory
-where this README file is located. Then you need to run the following two
-lines of R code:
+## Objectives
+- To understand patterns of learner engagement in a MOOC environment
 
-	library('ProjectTemplate')
-	load.project()
+- To examine the relationship between recorded activity and course completion
 
-After you enter the second line of code, you'll see a series of automated
-messages as ProjectTemplate goes about doing its work. This work involves:
-* Reading in the global configuration file contained in `config`.
-* Loading any R packages you listed in the configuration file.
-* Reading in any datasets stored in `data` or `cache`.
-* Preprocessing your data using the files in the `munge` directory.
+- To demonstrate the CRISP-DM methodology in a real educational dataset
 
-Once that's done, you can execute any code you'd like. For every analysis
-you create, we'd recommend putting a separate file in the `src` directory.
-If the files start with the two lines mentioned above:
+- To build a reproducible analytics workflow using ProjectTemplate and R Markdown
 
-	library('ProjectTemplate')
-	load.project()
+## Project structure
+AnalyticsFinal_Project/ 
+├── data/ # Raw input data (CSV files) 
 
-You'll have access to all of your data, already fully preprocessed, and
-all of the libraries you want to use.
+├── munge/ # Data preprocessing scripts 
 
-For more details about ProjectTemplate, see http://projecttemplate.net
+├── cache/ # Cached and processed datasets 
+
+├── reports/ # R Markdown report and outputs 
+
+├── src/ # Analysis and exploration scripts 
+
+├── graphs/ # Generated figures 
+
+├── config/ # ProjectTemplate configuration
+
+└── README.md # Project documentation
+
+## Methodology
+The analysis follows two CRISP-DM cycles:
+
+Cycle 1:
+Initial exploration of learner activity and its relationship with course completion across all enrolled learners.
+
+Cycle 2:
+Refined analysis focusing only on learners who recorded at least one activity, reducing distortion from inactive enrolments and strengthening interpretation.
+
+Exploratory visualisations (e.g. boxplots on a log scale) are used to compare engagement distributions between completing and non-completing learners.
+
+## Key Output
+- A cleaned, learner-level dataset combining enrolment and activity data
+
+- Exploratory plots comparing engagement by completion status
+
+- A full analytical report written in R Markdown and rendered to HTML
+
+## Way to run the Project
+Clone the repository:
+
+git clone https://github.com/AliceTing12/AnalyticsFinal_Project.git
+
+Open the project in RStudio.
+
+Install required packages if needed:
+
+install.packages(c("tidyverse", "ProjectTemplate", "rmarkdown"))
+
+Load the project:
+
+library(ProjectTemplate)
+load.project()
+
+Open and knit the report in reports/Report.Rmd.
+
+## Report
+
+The main analysis and findings are presented in the R Markdown report located in:
+
+reports/Report.Rmd
+
+This document includes the full CRISP-DM workflow, exploratory analysis, discussion, and conclusions.
+
+## Author
+
+Alice Ting Sze Yin 250507144 MAS8505
